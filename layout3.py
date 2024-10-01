@@ -21,25 +21,23 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My App")
 
-        layout1 = QHBoxLayout()
-        layout2 = QVBoxLayout()
+        layout1 = QVBoxLayout()
+        layout2 = QHBoxLayout()
         layout3 = QVBoxLayout()
 
-        layout1.setContentsMargins(0,0,0,0)
-        layout1.setSpacing(20)
+        layout1.setContentsMargins(10,10,10,10)
+        layout1.setSpacing(10)
 
-        layout2.addWidget(Color('white'))
-        layout2.addWidget(Color('green'))
+        layout2.addWidget(Color('yellow'))
+        layout2.addWidget(Color('purple'))
         layout2.addWidget(Color('red'))
 
-        layout1.addLayout( layout2 )
-
-        layout1.addWidget(Color('blue'))
-
-        layout3.addWidget(Color('black'))
+        layout1.addLayout(layout2)  
         layout3.addWidget(Color('blue'))
+        layout3.addWidget(Color('pink'))
+        layout3.addWidget(Color('gray'))
 
-        layout1.addLayout( layout3 )
+        layout1.addLayout(layout3)
 
         widget = QWidget()
         widget.setLayout(layout1)
